@@ -1,0 +1,44 @@
+{% load django_times %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Django Times</title>
+</head>
+<body>
+    <label for="date">Hour:</label>
+    <p>{% hour_now %}</p>
+
+    <label for="date">Minute:</label>
+    <p>{% minute_now %}</p>
+
+    <label for="date">Second:</label>
+    <p>{% second_now %}</p>
+
+    <label for="date">Date:</label>
+    <p>{% date %}</p>
+
+    <label for="date">Day:</label>
+    <p>{% day_now %}</p>
+
+    <label for="date">Month:</label>
+    <p>{% month_now %}</p>
+
+    <label for="date">Year:</label>
+    <p>{% year_now %}</p>
+
+    <label for="date">Date Time:</label>
+    <p>{% date_time_now %}</p>
+
+    <label for="date">Date Time Info:</label>
+    <p>{% date_time_now_info  '' 'en' %}</p>
+
+    <label for="date">Date Time Standar RSS:</label>
+    <p>{% date_time_now_rss  %}</p>
+
+    <label for="date">Time Update:</label>
+    <p>{% clock_update  %}</p>
+
+</body>
+</html>
