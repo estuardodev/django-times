@@ -1,5 +1,16 @@
 # Registro de Cambios (Changelog) - django-times
 
+## Version 0.1.1 (06/09/2023)
+
+### Cambios Principales
+
+- [Nueva Funcionalidad] Se agrego el formato de 12 horas para algunos tags.
+- [Mejora] Ahora hay un test para el pais de Guatemala.
+
+## Notas
+
+- Esta version de django-times proporciona estabilidad de horarios en ambos formatos 12 y 24 horas.
+
 ## Versión 0.1.0 (05/09/2023)
 
 ### Cambios Principales

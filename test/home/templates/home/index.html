@@ -7,38 +7,53 @@
     <title>Test Django Times</title>
 </head>
 <body>
-    <label for="date">Hour:</label>
-    <p>{% hour_now %}</p>
+    <label for="date"><strong>Hour (24 Hours):</strong></label>
+    <span>{% hour_now %}</p>
 
-    <label for="date">Minute:</label>
-    <p>{% minute_now %}</p>
+    <label for="date"><strong>Hour (12 Hours):</strong></label>
+    <span>{% hour_now '' 12 %}</p>
 
-    <label for="date">Second:</label>
-    <p>{% second_now %}</p>
+    <label for="date"><strong>Minute:</strong></label>
+    <span>{% minute_now %}</p>
 
-    <label for="date">Date:</label>
-    <p>{% date %}</p>
+    <label for="date"><strong>Second:</strong></label>
+    <span>{% second_now %}</p>
 
-    <label for="date">Day:</label>
-    <p>{% day_now %}</p>
+    <label for="date"><strong>Date:</strong></label>
+    <span>{% date %}</p>
 
-    <label for="date">Month:</label>
-    <p>{% month_now %}</p>
+    <label for="date"><strong>Day:</strong></label>
+    <span>{% day_now %}</p>
 
-    <label for="date">Year:</label>
-    <p>{% year_now %}</p>
+    <label for="date"><strong>Month:</strong></label>
+    <span>{% month_now %}</p>
 
-    <label for="date">Date Time:</label>
-    <p>{% date_time_now %}</p>
+    <label for="date"><strong>Year:</strong></label>
+    <span>{% year_now %}</p>
 
-    <label for="date">Date Time Info:</label>
-    <p>{% date_time_now_info  '' 'en' %}</p>
+    <label for="date"><strong>Date Time (24 horas):</strong></label>
+    <span>{% date_time_now %}</p>
 
-    <label for="date">Date Time Standar RSS:</label>
-    <p>{% date_time_now_rss  %}</p>
+    <label for="date"><strong>Date Time (12 horas):</strong></label>
+    <span>{% date_time_now '' 12 %}</p>
 
-    <label for="date">Time Update:</label>
-    <p>{% clock_update  %}</p>
+    <label for="date"><strong>Date Time Info (24 hours):</strong></label>
+    <span>{% date_time_now_info  '' 'en' %}</p>
+
+    <label for="date"><strong>Date Time Info (12 hours):</strong></label>
+    <span>{% date_time_now_info  '' 'en' 12%}</p>
+
+    <label for="date"><strong>Date Time Standar RSS:</strong></label>
+    <span>{% date_time_now_rss  %}</p>
+
+    <label for="date"><strong>Time Update (24 hours):</strong></label>
+    <span>{% clock_update  %}</p>
+
+    <label for="date"><strong>Time Update (12 hours):</strong></label>
+    <span>{% clock_update 12 %}</p>
+
+</body>
+</html>
 
 </body>
 </html>

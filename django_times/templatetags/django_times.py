@@ -57,7 +57,7 @@ def date(timezone_name=timezone_settings):
     return get_formatted_time(timezone_name, "%d/%m/%Y")
 
 @register.simple_tag
-def hour_now(timezone_name=timezone_settings):
+def hour_now(timezone_name=timezone_settings, format_12=24):
     '''
     Retorna la hora actual.
 
@@ -66,7 +66,13 @@ def hour_now(timezone_name=timezone_settings):
     {% hour_now %}
     {% hour_now 'America/Guatemala' %}  # Opcional: Puede especificar una zona horaria personalizada
     '''
-    return get_formatted_time(timezone_name, "%H")
+
+    if format_12 == 12:
+        format_date = "%I"
+    else:
+        format_date = "%H"
+
+    return get_formatted_time(timezone_name, format_date)
 
 @register.simple_tag
 def minute_now(timezone_name=timezone_settings):
@@ -93,7 +99,7 @@ def second_now(timezone_name=timezone_settings):
     return get_formatted_time(timezone_name, "%S")
 
 @register.simple_tag
-def date_time_now(timezone_name=timezone_settings):
+def date_time_now(timezone_name=timezone_settings, format_12=24):
     '''
     Retorna la fecha y hora actual.
 
@@ -102,10 +108,15 @@ def date_time_now(timezone_name=timezone_settings):
     {% date_time_now %}
     {% date_time_now 'America/Guatemala' %}  # Opcional: Puede especificar una zona horaria personalizada
     '''
-    return get_formatted_time(timezone_name, "%Y-%m-%dT%H:%M:%S")
+    if format_12 == 12:
+        format_date = "%Y-%m-%dT%I:%M:%S"
+    else:
+        format_date = "%Y-%m-%dT%H:%M:%S"
+
+    return get_formatted_time(timezone_name, format_date)
 
 @register.simple_tag
-def date_time_now_info(timezone_name=timezone_settings, language=language_settings):
+def date_time_now_info(timezone_name=timezone_settings, language=language_settings, format_12=24):
     '''
     Retorna la fecha y hora actual con información detallada.
 
@@ -115,7 +126,11 @@ def date_time_now_info(timezone_name=timezone_settings, language=language_settin
     {% date_time_now_info 'America/Guatemala' %}  # Opcional: Puede especificar una zona horaria personalizada
     {% date_time_now_info 'America/Guatemala' 'es' %}  # Opcional: Puede especificar una zona horaria y un idioma personalizados
     '''
-    return get_formatted_time_traslate(timezone_name, "%A, %d. %B %Y %I:%M%p", language)
+    if format_12 == 12:
+        format_date = 12
+    else:
+        format_date = "%A, %d. %B %Y %I:%M%p"
+    return get_formatted_time_traslate(timezone_name, format_date, language)
 
 @register.simple_tag
 def date_time_now_rss(timezone_name=timezone_settings):
@@ -130,7 +145,7 @@ def date_time_now_rss(timezone_name=timezone_settings):
     return get_formatted_time(timezone_name, '%a, %d %b %Y %H:%M:%S %z')
 
 @register.simple_tag
-def clock_update():
+def clock_update(format_12=24):
     '''
     Retorna un reloj que se actualiza cada segundo.
 
@@ -138,4 +153,7 @@ def clock_update():
 
     {% clock_update %}
     '''
-    return mark_safe('<span id="currentDate"></span>\n<script src="static/django_times/clock.js" type="text/javascript"></script>')
+    if format_12 == 12:
+        return mark_safe('<span id="currentDate12"></span>\n<script src="/static/django_times/clock_12.js" type="text/javascript"></script>')
+    else:
+        return mark_safe('<span id="currentDate"></span>\n<script src="/static/django_times/clock.js" type="text/javascript"></script>')

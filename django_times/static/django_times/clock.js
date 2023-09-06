@@ -1,6 +1,6 @@
 /**
  * Función Clock: Obtiene la hora actual formateada de acuerdo a opciones específicas.
- * @returns {string} La hora actual formateada.
+ * @returns {string} La hora actual formateada con AM o PM.
  */
 function Clock() {
     var date = new Date();
@@ -13,7 +13,14 @@ function Clock() {
         minute: "numeric",
         second: "numeric",
     };
-    return date.toLocaleTimeString(undefined, options);
+    var timeString = date.toLocaleTimeString(undefined, options);
+    var hours = date.getHours();
+    
+    // Agregar "AM" o "PM" según corresponda
+    var ampm = hours >= 12 ? 'p. m.' : 'a. m.';
+    timeString = timeString + ' ' + ampm;
+    
+    return timeString;
 }
 
 /**

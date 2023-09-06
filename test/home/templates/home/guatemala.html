@@ -1,0 +1,55 @@
+{% load django_times %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Guatemala</title>
+</head>
+<body>
+    <label for="date"><strong>Hora (24 horas):</strong></label>
+    <span>{% hour_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Hora (12 Horas):</strong></label>
+    <span>{% hour_now 'America/Guatemala' 12 %}</p>
+
+    <label for="date"><strong>Minuto:</strong></label>
+    <span>{% minute_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Segundo:</strong></label>
+    <span>{% second_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Fecha:</strong></label>
+    <span>{% date 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Día:</strong></label>
+    <span>{% day_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Mes:</strong></label>
+    <span>{% month_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Año:</strong></label>
+    <span>{% year_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Fecha y Hora (24 horas):</strong></label>
+    <span>{% date_time_now 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Fecha y Hora (12 horas):</strong></label>
+    <span>{% date_time_now 'America/Guatemala' 12%}</p>
+
+    <label for="date"><strong>Fecha y Hora con Información (24 horas):</strong></label>
+    <span>{% date_time_now_info  'America/Guatemala' 'es'%}</p>
+
+    <label for="date"><strong>Fecha y Hora con Información (12 Horas):</strong></label>
+    <span>{% date_time_now_info  'America/Guatemala' 'es' 12%}</p>
+
+    <label for="date"><strong>Tiempo y Hora con formato RSS Estandar:</strong></label>
+    <span>{% date_time_now_rss 'America/Guatemala' %}</p>
+
+    <label for="date"><strong>Tiempo en vivo (24 horas):</strong></label>
+    <span>{% clock_update %}</p>
+
+    <label for="date"><strong>Tiempo en vivo (12 horas):</strong></label>
+    <span>{% clock_update 12 %}</p>
+</body>
+</html>

@@ -75,5 +75,7 @@ def get_formatted_time_traslate(timezone_name, format_string, language):
         formatted_time = dates.format_datetime(current_time, format='iso', locale=locale)
     elif format_string == "%A, %d. %B %Y %I:%M%p":
         formatted_time = dates.format_datetime(current_time, format='full', locale=locale)
+    elif format_string == 12: 
+        formatted_time = dates.format_datetime(current_time, format='EEEE, d. MMMM y h:mm a', locale=locale)
     
     return formatted_time
