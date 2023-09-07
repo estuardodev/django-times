@@ -15,11 +15,11 @@ function Clock() {
     };
     var timeString = date.toLocaleTimeString(undefined, options);
     var hours = date.getHours();
-    
+
     // Agregar "AM" o "PM" según corresponda
     var ampm = hours >= 12 ? 'p. m.' : 'a. m.';
     timeString = timeString + ' ' + ampm;
-    
+
     return timeString;
 }
 

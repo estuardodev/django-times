@@ -81,13 +81,17 @@ Y ya puedes usar los distintos tags que te ofrece django-times:
 2. Clona tu repositorio fork en tu entorno de desarrollo local.
 `git clone https://github.com/TU_NOMBRE_DE_USUARIO/django-times.git`
 
-3. Crea una rama para tu contribucion.
+3. Crea tu entorno virtual, activalo e instala requirements-dev.txt
+
+4. Crea una rama para tu contribucion.
 `git checkout -b mi-contribucion`
 
-4. Realiza tus cambios y realiza confirmaciones significativas.
+5. Realiza tus cambios y realiza confirmaciones significativas.
 
-5. Envia una solicitud de extraccion (pull request) a la rama principal del proyecto.
+6. Ejecuta `pre-commit run --all-files`, si falla vuelve a ejecutarlo hasta que todo sea "Passed" de lo contrario soluciona los errores.
 
-6. Tu solicitud de extraccion sera revisada y, si es aceptada, se fusionara con el proyecto principal.
+7. Envia una solicitud de extraccion (pull request) a la rama principal del proyecto.
+
+8. Tu solicitud de extraccion sera revisada y, si es aceptada, se fusionara con el proyecto principal.
 
 > Recuerda siempre editar el archivo CHANGELOG.md indicando que cambios realizastes, tambien se descriptivo en el mensaje de tu commit y  agrega tu nombre a CONTRIBUTORS siguiendo el orden alfabetico.

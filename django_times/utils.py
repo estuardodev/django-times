@@ -15,7 +15,7 @@ def get_timezone(timezone_name):
     try:
         user_timezone = pytz.timezone(timezone_name)
     except pytz.UnknownTimeZoneError:
-        user_timezone = pytz.utc 
+        user_timezone = pytz.utc
     return user_timezone
 
 def get_formatted_time(timezone_name, format_string):
@@ -56,7 +56,7 @@ def get_formatted_time_traslate(timezone_name, format_string, language):
     locale = Locale(language_code)
 
     formatted_time = None
-    
+
     if format_string == "%d":
         formatted_time = dates.format_date(current_time, format='d', locale=locale)
     elif format_string == "%m":
@@ -75,7 +75,7 @@ def get_formatted_time_traslate(timezone_name, format_string, language):
         formatted_time = dates.format_datetime(current_time, format='iso', locale=locale)
     elif format_string == "%A, %d. %B %Y %I:%M%p":
         formatted_time = dates.format_datetime(current_time, format='full', locale=locale)
-    elif format_string == 12: 
+    elif format_string == 12:
         formatted_time = dates.format_datetime(current_time, format='EEEE, d. MMMM y h:mm a', locale=locale)
-    
+
     return formatted_time

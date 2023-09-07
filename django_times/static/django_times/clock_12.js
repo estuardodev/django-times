@@ -12,9 +12,9 @@ function Clock12() {
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
-        hour12: true, 
+        hour12: true,
     };
-    
+
     return date.toLocaleTimeString(undefined, options);
 }
 
