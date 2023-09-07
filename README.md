@@ -30,16 +30,16 @@ Para utilizar esta biblioteca en tu proyecto Django, sigue estos pasos:
 
 1. Crea un entorno virtual para tu proyecto (se recomienda, pero opcional).
 
-    ```
+    ```python
     py -m venv env # Windows
     python3 -m virtualenv env # Linux
     ```
 
 2. Activa el entorno virtual
 
-    ```
-	.\env\Scripts\activate # Windows
-	source env/bin/activate # Linux
+    ```python
+    .\env\Scripts\activate # Windows
+    source env/bin/activate # Linux
     ```
 
 3. Instala los django_times
@@ -47,30 +47,33 @@ Para utilizar esta biblioteca en tu proyecto Django, sigue estos pasos:
     `pip install django-times`
 
 4. INSTALLED_APPS
-    ```
-	INSTALLED_APPS = [
-	...
-	'django_times',
-	...
+
+    ```python
+    INSTALLED_APPS = [
+        ...
+        'django_times',
+        ...
     ]
     ```
 
 5. Recoger archivos estaticos
 
-    ```
-	py manage.py collectstatic # Windows
-	python3 manage.py collectstatic # Linux
+    ```python
+    py manage.py collectstatic # Windows
+    python3 manage.py collectstatic # Linux
     ```
 
 ### Uso
+
 Para usar django times dentro de tus plantillas de django debes de cargar el tag, para ello usa:
 
-	{% load django_times %}
+ `{% load django_times %}`
 
 Y ya puedes usar los distintos tags que te ofrece django-times:
 [ver mas...](./docs/TAGS.MD)
 
 ## Contribucion
+
 ¡Gracias por considerar contribuir a este proyecto! Si deseas contribuir, sigue estos pasos:
 
 1. Crea un fork del repositorio en GitHub.

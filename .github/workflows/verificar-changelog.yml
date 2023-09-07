@@ -1,0 +1,19 @@
+name: Verificar CHANGELOG
+
+on:
+  push:
+    branches:
+      - master # rama principal
+
+jobs:
+  verificar-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Instalar Markdown linter
+        run: npm install -g markdownlint-cli
+
+      - name: Verificar CHANGELOG
+        run: markdownlint --config .markdownlint.yml CHANGELOG.md

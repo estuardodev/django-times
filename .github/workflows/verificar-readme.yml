@@ -1,0 +1,19 @@
+name: Verificar README
+
+on:
+  push:
+    branches:
+      - master # rama principal
+
+jobs:
+  verificar-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Instalar Markdown linter
+        run: npm install -g markdownlint-cli
+
+      - name: Verificar README
+        run: markdownlint --config .markdownlint.yml README.md

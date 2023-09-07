@@ -1,4 +1,5 @@
 # Tags
+
 ## Etiqueta `day_now`
 
 ```python
@@ -7,12 +8,10 @@
 ```
 
 > Descripcion: Retorna el dia actual de acuerdo con la zona horaria configurada en las opciones (TIME_ZONE) de Django.
-
+>
 > Uso: Puedes usar {% day_now %} para obtener el dia actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% day_now 'America/Guatemala' %}.
 
-
 ------------
-
 
 ## Etiqueta `month_now`
 
@@ -22,7 +21,7 @@
 ```
 
 > Descripcion: Retorna el mes actual.
-
+>
 > Uso: Puedes usar {% month_now %} para obtener el mes actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% month_now 'America/Guatemala' %}.
 
 ------------
@@ -35,7 +34,7 @@
 ```
 
 > Descripcion: Retorna el año actual.
-
+>
 > Uso: Puedes usar {% year_now %} para obtener el año actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% year_now 'America/Guatemala' %}.
 
 ------------
@@ -48,7 +47,7 @@
 ```
 
 > Descripcion: Retorna la fecha actual.
-
+>
 > Uso: Puedes usar {% date %} para obtener la fecha actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% date 'America/Guatemala' %}.
 
 ------------
@@ -62,7 +61,7 @@
 ```
 
 > Descripcion: Retorna la hora actual.
-
+>
 > Uso: Puedes usar {% hour_now %} para obtener la hora actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% hour_now 'America/Guatemala' %}.
 
 ------------
@@ -75,7 +74,7 @@
 ```
 
 > Descripcion: Retorna los minutos actuales.
-
+>
 > Uso: Puedes usar {% minute_now %} para obtener los minutos actuales. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% minute_now 'America/Guatemala' %}.
 
 ------------
@@ -88,7 +87,7 @@
 ```
 
 > Descripcion: Retorna los segundos actuales.
-
+>
 > Uso: Puedes usar {% second_now %} para obtener los segundos actuales. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% second_now 'America/Guatemala' %}.
 
 ------------
@@ -102,7 +101,7 @@
 ```
 
 > Descripcion: Retorna la fecha y hora actual.
-
+>
 > Uso: Puedes usar {% date_time_now %} para obtener la fecha y hora actual. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% date_time_now 'America/Guatemala' %}.
 
 ------------
@@ -117,7 +116,7 @@
 ```
 
 > Descripcion: Retorna la fecha y hora actual con informacion detallada.
-
+>
 > Uso: Puedes usar {% date_time_now_info %} para obtener la fecha y hora actual con informacion detallada. Tambien puedes especificar una zona horaria personalizada y un idioma personalizado, por ejemplo, {% date_time_now_info 'America/Guatemala' 'es' %}.
 
 ------------
@@ -130,7 +129,7 @@
 ```
 
 > Descripcion: Retorna la fecha y hora actual en el formato estandar RSS.
-
+>
 > Uso: Puedes usar {% date_time_now_rss %} para obtener la fecha y hora actual en el formato RSS. Tambien puedes especificar una zona horaria personalizada, por ejemplo, {% date_time_now_rss 'America/Guatemala' %}.
 
 ------------
@@ -143,5 +142,5 @@
 ```
 
 > Descripcion: Retorna un reloj que se actualiza cada segundo.
-
+>
 > Uso: Puedes usar {% clock_update %} para agregar un reloj que se actualiza automaticamente cada segundo en tu pagina web.
