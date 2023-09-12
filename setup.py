@@ -47,6 +47,6 @@ setup(
         'Topic :: Software Development :: Bug Tracking',
     ],
     package_data={
-        'django_times': ['static/*.*', 'static/*/*.*'],  
+        'django_times': ['static/*.*', 'static/*/*.*'],
     },
 )
