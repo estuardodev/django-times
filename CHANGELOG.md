@@ -1,5 +1,17 @@
 # Registro de Cambios (Changelog) - django-times
 
+## Version 0.1.3 (12/09/2023)
+
+### Correcciones y Mejoras V_0.1.3
+
+- Se soluciono un bug que evitaba que cargaran los archivos estaticos
+
+## Version 0.1.2 (12/09/2023)
+
+### Correcciones y Mejoras V_0.1.2
+
+- Se soluciono un bug
+
 ## Version 0.1.1 (06/09/2023)
 
 ### Cambios Principales V_0.1.1

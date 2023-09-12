@@ -9,7 +9,7 @@ long_description = read('README.md')
 
 setup(
     name="django-times",
-    version="0.1.1",
+    version="0.1.3",
     description="Una biblioteca para trabajar con fechas y horas en Django dentro de los templates.",
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -46,4 +46,7 @@ setup(
         'Topic :: Office/Business',
         'Topic :: Software Development :: Bug Tracking',
     ],
+    package_data={
+        'django_times': ['static/*.*', 'static/*/*.*'],  
+    },
 )
